@@ -1,0 +1,58 @@
+<!--pages/route_detail/route_detail.wxml-->
+<van-row>
+  <van-col span="24">
+    <!-- 图片 st--a-rt -->
+    <van-col span="24" custom-class="img">
+      <image src="{{ http }}{{ datas.img }}"></image>
+    </van-col>
+    <!-- 图片 end -->
+
+    <van-col span="23" offset="1" custom-class="title">
+      {{ datas.name }}
+    </van-col>
+
+    <van-col span="23" offset="1" custom-class="selectBox">
+      <van-col span="5" custom-class="route" bindtap="toRoutePreview">
+        线路预览
+      </van-col>
+
+      <van-col span="5" offset="1" custom-class="place" bindtap="toPlaceInfor">
+        景点介绍
+      </van-col>
+
+    </van-col>
+
+    <van-col span="24" custom-class="block">
+    </van-col>
+
+    <van-col span="23" offset="1" custom-class="timeBox">
+      <van-col span="3" custom-class="timeImg">
+        <image src="../../images/riqi.png"></image>
+      </van-col>
+
+      <van-col span="15" custom-class="time">
+        {{ datas.start_time}}
+      </van-col>
+
+    </van-col>
+
+    <van-col span="23" offset="1" custom-class="timeBox">
+      <van-col span="3" custom-class="timeImg">
+        <image src="../../images/location.png"></image>
+      </van-col>
+
+      <van-col span="15" custom-class="time">
+        {{ datas.name }}
+      </van-col>
+
+    </van-col>
+
+    <van-col span="24" custom-class="block">
+    </van-col>
+
+    <van-col span="23" offset="1" custom-class="desc">
+      {{ datas.desc }}
+    </van-col>
+
+  </van-col>
+</van-row>

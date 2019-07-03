@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/set_up/set_up",
+    "pages/preview/preview",
+    "pages/route_detail/route_detail",
+    "pages/discovery_spots_detail/discovery_spots_detail",
+    "pages/answer_place/answer_place",
+    "pages/route/route",
+    "pages/introduction_spot/introduction_spot",
+    "pages/discovery_activities/discovery_activities",
+    "pages/answer_activity/answer_activity",
+    "pages/discovery_spots/discovery_spots",
+    "pages/discovery_activities_detail/discovery_activities_detail",
+    "pages/register/register",
+    "pages/search/search",
+    "pages/certificate/certificate",
+    
+    "pages/personal_home_page/personal_home_page",
+    "pages/change_password/change_password",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

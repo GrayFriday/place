@@ -1,0 +1,20 @@
+
+<view>
+  <van-row>
+    <!-- 图片部分 start -->
+    <van-col span="23" custom-class="picBox">
+      <image src='../../images/pic.png'></image>
+    </van-col>
+    <!-- 图片部分 end -->
+
+    <van-col span="23" custom-class="location">
+      已到达第一个点
+    </van-col>
+
+     <van-col span="12" offset="6" custom-class="answerBtn" bindtap="toAnswer">
+     <button>开始答题</button>
+    </van-col>
+
+
+  </van-row>
+</view>

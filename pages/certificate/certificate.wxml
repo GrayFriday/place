@@ -1,0 +1,52 @@
+<!--pages/certificate/certificate.wxml-->
+<van-row>
+  <van-col span="24">
+    <van-col span="3" offset="10" custom-class="title_line">
+    </van-col>
+    <van-col span="24">
+      <van-col span="7" offset="8" custom-class="title">
+        完成比赛!
+      </van-col>
+    </van-col>
+  </van-col>
+
+  <van-col span="24" custom-class="content">
+    <van-col span="24" custom-class="certificate">
+      完赛证书
+    </van-col>
+
+    <van-col span="24" custom-class="certificate_eng">
+      DIRECTIONAL CERTIFICATE
+    </van-col>
+
+    <van-col span="24" custom-class="declaration">
+      热爱中国共产党队
+    </van-col>
+
+    <van-col span="20" offset="2" custom-class="line">
+    </van-col>
+
+    <van-col span="24" custom-class="group">
+      <van-col span="10" offset="2" custom-class="captain">
+        队长：我爱国
+      </van-col>
+      <van-col span="10" custom-class="member">
+        队员：爱国警告
+      </van-col>
+    </van-col>
+
+    <van-col span="24" custom-class="desc">
+      于2019年3月26日成功完成箭向系统活动“大家一起来爱国”综合耗时：05：06：07（时：分：秒）
+    </van-col>
+
+    <van-col span="24" custom-class="commemorative">
+      特发此证 以资纪念
+    </van-col>
+
+  </van-col>
+
+
+
+
+
+</van-row>

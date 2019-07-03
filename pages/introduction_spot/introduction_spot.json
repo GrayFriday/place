@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-row": "../../dist/row/index",
+    "van-col": "../../dist/col/index"
+  },
+  "navigationBarTitleText": "湘江战役纪念公园"
+}

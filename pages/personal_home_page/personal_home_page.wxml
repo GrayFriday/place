@@ -1,0 +1,156 @@
+<!--pages/personal_home_page/personal_home_page.wxml-->
+<view>
+  <van-row>
+    <!-- 个人信息部分 start -->
+    <van-col span="24" custom-class="inforBox">
+      <van-col span="5" custom-class="touxiang">
+        <open-data type="userAvatarUrl"></open-data>
+      </van-col>
+
+      <van-col span="10" custom-class="nameBox">
+        <van-col span="24" custom-class="name">
+          <open-data type="userNickName"></open-data>
+        </van-col>
+        <van-col span="24" custom-class="phone">
+          151****4143
+        </van-col>
+
+      </van-col>
+
+      <van-col span="6" custom-class="set" bindtap="tpSetUp">
+        设置
+      </van-col>
+    </van-col>
+    <!--个人信息 end -->
+
+    <!-- 我的订单部分 start -->
+    <van-col span="24" custom-class="orderBox">
+      <van-col span="24" custom-class="title_order">
+        我的订单
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <!-- <van-col span="24" custom-class="pic">
+          <image src='../../images/all.png'></image>
+        </van-col> -->
+        <van-col span="24" custom-class="text">
+          全部
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <!-- <van-col span="24" custom-class="pic">
+          <image src='../../images/mywait_pay.png'></image>
+        </van-col> -->
+        <van-col span="24" custom-class="text">
+          待支付
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <!-- <van-col span="24" custom-class="pic">
+          <image src='../../images/payed.png'></image>
+        </van-col> -->
+        <van-col span="24" custom-class="text">
+          已支付
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <!-- <van-col span="24" custom-class="pic">
+          <image src='../../images/compelted.png'></image>
+        </van-col> -->
+        <van-col span="24" custom-class="text">
+          已完成
+        </van-col>
+      </van-col>
+
+    </van-col>
+    <!-- 我的订单部分 end -->
+
+    <!-- 其他功能部分 start -->
+    <van-col span="24" custom-class="orderBox">
+      <van-col span="24" custom-class="title_order">
+        其他功能
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/map.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          我的线路
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/unit.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          我的队伍
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/code.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          二维码
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/medal.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          我的勋章
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/contact_us.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          联系我们
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/about_us.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          关于我们
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/clear.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          清空缓存
+        </van-col>
+      </van-col>
+
+      <van-col span="6" custom-class="pic_order" bindtap="signOut">
+        <van-col span="24" custom-class="pic">
+          <image src='../../images/sign_out.png'></image>
+        </van-col>
+        <van-col span="24" custom-class="text">
+          退出登录
+        </van-col>
+        <van-dialog use-slot show="{{ show }}" title="{{ title }}"class="logout" show-cancel-button bind:close="onClose" bind:confirm="confirm">
+          <view class='content'>退出登录将清空现有的登录信息，请谨慎操作</view>
+        </van-dialog>
+      </van-col>
+
+    </van-col>
+    <!-- 其他功能部分 end -->
+
+  </van-row>
+</view>

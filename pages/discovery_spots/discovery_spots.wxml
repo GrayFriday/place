@@ -1,0 +1,31 @@
+<!--pages/discovery_activities/discovery_activities.wxml-->
+<view>
+  <van-row>
+    <!-- 图片部分 start -->
+    <van-col span="23" custom-class="picBox" wx:for="{{ activities }}" wx:key="key" data-id="{{ item.id }}" bindtap="toActivity">
+      <van-col span="23" custom-class="labelBox">
+        <van-col span="24">
+          <van-col span="6" custom-class="label">
+            {{ item.title }}
+          </van-col>
+        </van-col>
+
+        <van-col span="22" offset="1" custom-class="address">
+          {{ item.address }}
+        </van-col>
+
+        <van-col span="22" offset="1" custom-class="type">
+          {{ item.desc }}
+        </van-col>
+
+      </van-col>
+
+      <image src="{{ http }}{{ item.imgurl }}"></image>
+    </van-col>
+    <!-- 图片部分 end -->
+
+    <van-dialog use-slot show="{{ show }}" title="{{ title }}" show-cancel-button bind:close="onClose" bind:confirm="confirm">
+      <view class='content'>您当前未登录，是否前往登录</view>
+    </van-dialog>
+  </van-row>
+</view>

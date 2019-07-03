@@ -1,0 +1,52 @@
+/* pages/route_detail/route_detail.wxss */
+
+.img image {
+  height: 300rpx;
+  width: 100%;
+}
+
+.title {
+  font-size: 16px;
+  margin-top: 20rpx;
+}
+
+.route {
+  background: #21c600;
+  font-size: 12px;
+  margin-top: 20rpx;
+  padding: 8rpx 10rpx;
+  color: #fff;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.place {
+  border: 1px solid#21C600;
+  font-size: 12px;
+  margin-top: 20rpx;
+  padding: 6rpx 8rpx;
+  color: #21c600;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.block{
+  height: 10rpx;
+  background: #f5f5f5;
+}
+
+.timeImg image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.time{
+  font-size: 14px;
+  margin-top: 22rpx;
+}
+
+.desc{
+  font-size: 14px;
+  padding-top: 20rpx;
+}

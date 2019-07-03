@@ -1,0 +1,39 @@
+/* pages/discovery_activities_detail1/discovery_activities_detail1.wxss */
+
+.picBox {
+  width: 100%;
+  height: 500rpx;
+  border-radius: 20rpx;
+  margin-left: 2%;
+}
+
+.picBox image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.location {
+  font-size: 15px;
+  padding-left: 2%;
+  margin-top: 20rpx;
+}
+
+.answerBtn {
+  border: none;
+  background-color: red;
+  border-radius: 50rpx;
+  margin-top: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.answerBtn button {
+  border: none;
+  background-color: red;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 15px;
+  height: 100%;
+  line-height: 100rpx;
+}

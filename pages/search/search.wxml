@@ -1,0 +1,29 @@
+<!--pages/search/search.wxml-->
+<van-row>
+  <van-col span="24" custom-class="inpBox">
+    <van-col span="2" custom-class="return" >
+      <image src='../../images/sousuo.png'></image>
+    </van-col>
+
+    <van-col span="19" custom-class="inp">
+      <input class='input' value="{{ value }}" placeholder="请输入信息" focus='{{inputFocus}}' bindtap='tapInput'>
+      </input>
+    </van-col>
+
+    <van-col span="3" custom-class="text">
+      搜索
+    </van-col>
+
+   <van-col span="24" custom-class="data">
+   <van-col span="24">
+      <image src='../../images/medal.png' class='img'></image>
+    </van-col>
+
+     <van-col span="24">
+      暂无~
+    </van-col>
+
+    </van-col>
+    
+  </van-col>
+</van-row>

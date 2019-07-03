@@ -1,0 +1,77 @@
+/* pages/certificate/certificate.wxss */
+page{
+ background: #fff3f3;
+}
+.title_line {
+  margin-top: 170rpx;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 19px;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid black;
+  /* padding-left: 10rpx; */
+}
+
+.content {
+  margin-top: 200rpx;
+ 
+}
+
+.certificate {
+  text-align: center;
+  font-size: 22px;
+  color: #6c0d15;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.certificate_eng {
+  text-align: center;
+  font-size: 15px;
+  color: #6d0f16;
+  margin-top: 10rpx;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.declaration {
+  text-align: center;
+  font-size: 15px;
+  color: #7a343a;
+  margin-top: 30rpx;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.line {
+  margin-top: 15rpx;
+  border-bottom: 1px solid #7c3334;
+}
+
+.group {
+  margin-top: 10rpx;
+  color: #772f35;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 40rpx;
+}
+
+.desc {
+  color: #772f35;
+  text-align: left;
+  text-indent: 60rpx;
+  font-size: 15px;
+  padding: 10rpx 70rpx;
+}
+
+.commemorative{
+  margin-top: 30rpx;
+  text-align: center;
+  color: #772f35;
+  font-size: 16px;
+}

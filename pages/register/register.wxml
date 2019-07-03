@@ -1,0 +1,40 @@
+<!--pages/register/register.wxml-->
+<view>
+  <!-- 图片部分 start -->
+  <view class='picBox'>
+
+  </view>
+  <!-- 图片部分 end -->
+
+  <!-- input部分 start -->
+  <view>
+    <van-cell-group custom-class="inpBox">
+
+      <van-field value="{{ sms }}" center clearable label="手机号"  maxlength="11" placeholder="请输入手机号" border="{{ true }}" use-button-slot bindinput="phoneInput">
+        <!-- <van-button class="yzmBtn" slot="button"  bindtap="bindButtonTap" disabled='{{disabled}}' style="background-color:{{color}}"  border="{{border }}" >{{ text }}</van-button> -->
+        
+      </van-field>
+
+      <van-field value="{{ sms }}" center clearable label="验证码" placeholder="请输入验证码" border="{{ true }}" use-button-slot>
+      </van-field>
+    </van-cell-group>
+  </view>
+  <!-- input部分 end -->
+
+  <!-- 登录按钮 start -->
+  <view>
+    <button class='loginBtn'>下一步</button>
+  </view>
+  <!-- 登录按钮 end -->
+
+  <!-- 跳转注册部分 start -->
+  <view class='toRegister' bindtap='toLogin'>
+    已注册？
+    <span style="color:red;">去登录 > </span>
+  </view>
+  <!-- 跳转注册部分 end -->
+
+  <!-- <button open-type="openSetting">打开授权设置页</button> -->
+
+  <button class='yzmBtn' bindtap="bindButtonTap" disabled='{{disabled}}' style="background-color:{{color}}">{{ text }}</button>
+</view>

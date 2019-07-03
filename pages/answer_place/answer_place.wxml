@@ -1,0 +1,22 @@
+<!--pages/answer/answer.wxml-->
+<view>
+  <van-row>
+    <!-- 图片部分 start -->
+    <van-col span="24" custom-class="picBox">
+      <image src='{{ http }}{{items.img}}'></image>
+    </van-col>
+    <!-- 图片部分 end -->
+
+    <!-- 答题部分 start -->
+    <van-col span="24" custom-class="title">题目</van-col>
+    <van-col span="24" custom-class="problem">{{items.topic}}</van-col>
+    <van-col span="24" custom-class="answer">答案</van-col>
+    <van-col span="24" custom-class="answer" >
+      <van-col span="10" data-id="1" custom-class="answer1" bindtap="correct" offset="4">A.{{ item.A }}</van-col>
+      <van-col span="10"data-id="2" bindtap="correct" custom-class="answer1">B.{{ item.B }}</van-col>
+      <van-col span="10"data-id="3" bindtap="correct" custom-class="answer1" offset="4">C.{{ item.C }}</van-col>
+      <van-col span="10"data-id="4" bindtap="correct" custom-class="answer1">D.{{ item.D }}</van-col>
+    </van-col>
+    <!-- 答题部分 end -->
+  </van-row>
+</view>
