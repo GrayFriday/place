@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    to_answer: true
+    to_answer: true,
+    http:app.globalData.http
   },
 
   /**

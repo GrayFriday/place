@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModal_0: true,
     dataArray:[],
     banner:[],
     http:app.globalData.http
@@ -48,6 +49,12 @@ Page({
       }
     });
 
+  },
+
+  toIndex: function () {
+    this.setData({
+      showModal_0: false
+    })
   },
 
   /**

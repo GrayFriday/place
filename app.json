@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/preview/preview",
+    "pages/change_password/change_password",
     "pages/introduction_spot/introduction_spot",
     "pages/set_up/set_up",
-    
+    "pages/preview/preview",
     "pages/route_detail/route_detail",
     "pages/discovery_spots_detail/discovery_spots_detail",
     "pages/answer_place/answer_place",
@@ -17,7 +17,7 @@
     "pages/certificate/certificate",
     
     "pages/personal_home_page/personal_home_page",
-    "pages/change_password/change_password",
+    
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs"

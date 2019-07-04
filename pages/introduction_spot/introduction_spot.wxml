@@ -27,4 +27,23 @@
   </swiper-item>
 </swiper>
 
-<!-- indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" -->
+<view class="modal-mask" wx:if="{{showModal_0}}"> </view>
+    <!-- </navigator> -->
+    <view wx:if="{{showModal_0}}" class='modalBox_0'>
+      <view class='tip_0'>
+        <view class='title_tip'>
+          温馨提示
+        </view>
+        <view class="img_box1">
+          <!-- <navigator open-type="exit" target="miniProgram"> -->
+          <image src='../../images/guanbi.png' bindtap='toIndex'></image>
+          <!-- </navigator> -->
+        </view>
+        <view class='cont_tip_0'>
+          左右滑动可查看景区其他节点
+          <view class='btn_tip'>
+            <button  bindtap='toIndex'>我知道了</button>
+          </view>
+        </view>
+      </view>
+    </view>

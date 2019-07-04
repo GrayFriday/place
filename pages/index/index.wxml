@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view>
 <!-- polyline="{{polyline}}" -->
-  <map longitude="{{longitude1}}" latitude="{{latitude1}}" scale="14" show-location="true" markers="{{markers1}}" class='all' >
+  <map id="map" longitude="{{longitude1}}" latitude="{{latitude1}}" scale="14" show-location="true" markers="{{markers1}}" class='all' >
     <cover-view class='searchBox'>
       <cover-image src='../../images/contact_us.png' class='img' bindtap='toMy'>
       </cover-image>
@@ -22,7 +22,7 @@
       </cover-image>
       <cover-view class='lanya_text'>蓝牙检测</cover-view>
     </cover-view>
-    <cover-view class='size_small' bindtap=''>
+    <cover-view class='size_small' bindtap='moveToLocation'>
       <cover-image src='../../images/dingwei.png' class='dingwei'></cover-image>
     </cover-view>
     <!-- <cover-view class='luKuang'>

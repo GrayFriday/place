@@ -97,7 +97,13 @@ Page({
     })
 
     this.rejister();
+    this.mapCtx = wx.createMapContext('map');
+    this.startConnect();
 
+  },
+
+  moveToLocation: function() {
+    this.mapCtx.moveToLocation()
   },
 
   getStadium: function() {
@@ -110,9 +116,6 @@ Page({
       console.log(res)
       let that = this;
       if (res.statusCode === 200) {
-        console.log('success')
-        console.log(res)
-
         var dataPlace = res.data.Data
         console.log(dataPlace)
         const markers = []
@@ -135,7 +138,7 @@ Page({
           }
           markers.push(datas)
         }
-       
+
         that.setData({
           markers1: markers
         })
@@ -181,22 +184,8 @@ Page({
     });
   },
 
-  openLanya: function() {
-    wx.openBluetoothAdapter({
-      success(res) {
-        if (errCode = 0) {
-          wx.showModal({
-            title: '提示',
-            content: '蓝牙已开启',
-            icon: "none"
-          })
-        }
-        // console.log(res)
-      }
-    })
-  },
   lanya: function() {
-    // this.openLanya()
+    this.startConnect();
   },
 
   // 跳转活动页
@@ -286,6 +275,53 @@ Page({
       showModal_0: false
     })
   },
+
+  // 蓝牙部分
+
+  startConnect: function() {
+    var that = this;
+    // wx.showLoading({
+    //   title: '开启蓝牙适配'
+    // });
+
+    wx.openBluetoothAdapter({
+      success: function(res) {
+        wx.showToast({
+          title: '蓝牙已打开',
+          icon: 'success',
+          duration: 3000
+        })
+
+        setTimeout(function () {
+          wx.hideToast()
+        }, 3000)
+        that.getBluetoothAdapterState();
+      },
+
+      fail: function(err) {
+        wx.showToast({
+          title: '蓝牙未打开',
+          icon: 'fail',
+          duration: 3000
+        })
+
+        setTimeout(function() {
+          wx.hideToast()
+        }, 3000)
+      }
+    });
+
+    wx.onBluetoothAdapterStateChange(function(res) {
+      var that = this;
+      console.log(res)
+      var available = res.available;
+      if (available) {
+        that.getBluetoothAdapterState();
+      }
+    })
+
+  },
+
 
 
 })

@@ -50,7 +50,7 @@
     <van-col span="24" custom-class="block">
     </van-col>
 
-    <van-col span="23" offset="1" custom-class="desc">
+    <van-col span="22" offset="1" custom-class="desc">
       {{ datas.desc }}
     </van-col>
 

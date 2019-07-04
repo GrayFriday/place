@@ -18,6 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.showLoading({
+      title: '加载中',
+    })
     var that=this
     const data = {
       id: '124'
@@ -29,10 +32,15 @@ Page({
       let number = Math.floor(Math.random() * subjects.length)
       that.data.correct = subjects[number].correct;
       console.log(subjects[number].option)
-      that.setData({
-        items: subjects[number],
-        item: subjects[number].option
-      })
+      if (res.statusCode === 200 ){
+        that.setData({
+          items: subjects[number],
+          item: subjects[number].option
+        })
+        wx.hideLoading()
+      }
+      
+
     });
   },
 

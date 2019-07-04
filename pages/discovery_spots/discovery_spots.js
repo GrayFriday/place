@@ -26,7 +26,6 @@ Page({
     }
     const url = '/api/v1/user/getScenic'
     http(url, data, "POST").then(res => {
-      console.log(res)
       let that = this;
       if (res.statusCode === 200) {
         that.setData({

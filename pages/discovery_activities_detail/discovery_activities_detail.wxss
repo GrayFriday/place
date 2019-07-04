@@ -5,6 +5,7 @@
   height: 500rpx;
   border-radius: 20rpx;
   margin-left: 2%;
+  margin-top: 100rpx;
 }
 
 .picBox image {
