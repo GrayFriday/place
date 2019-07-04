@@ -8,6 +8,7 @@ Page({
    */
   data: {
     to_answer: true,
+    spots:[],
     http:app.globalData.http
   },
 
@@ -15,18 +16,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中',
+    })
     const data = {
       id: options.id
     }
-    const url = '/api/v1/user/show_activity'
+    const url = '/api/v1/user/get_Scenic_info_wx'
     http(url, data, "POST").then(res => {
-      console.log(res)
-      // let that = this;
-      // if (res.statusCode === 200) {
-      //   that.setData({
-      //     activities: res.data.Data
-      //   })
-      // }
+      let details = res.data.Data
+      let that = this;
+      if (res.statusCode === 200) {
+        that.setData({
+          spots: details
+        })
+        wx.hideLoading();
+        wx.setNavigationBarTitle({
+          title: details.title
+        });
+      }
 
     })
 

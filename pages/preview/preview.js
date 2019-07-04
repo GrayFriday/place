@@ -157,6 +157,8 @@ Page({
         that.setData({
           markers1: markers
         })
+
+        let points = res.data.Data
       }
 
     })

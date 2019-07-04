@@ -37,14 +37,17 @@ Page({
 
   },
 
-  toActivity: function(event) {
+  toActivity: function (event) {
+    console.log(event)
+    var postId = event.currentTarget.dataset.id;
+    console.log(postId)
     wx.navigateTo({
-      url: '/pages/discovery_spots_detail/discovery_spots_detail',
-      success: function(res) {
+      url: '/pages/discovery_spots_detail/discovery_spots_detail?id=' + postId,
+      success: function (res) {
 
       },
-      fail: function(res) {},
-      complete: function(res) {},
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
 

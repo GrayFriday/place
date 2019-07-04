@@ -3,7 +3,7 @@
   <van-row>
     <!-- 图片部分 start -->
     <van-col span="23" custom-class="picBox">
-      <image src='../../images/pic.png'></image>
+      <image src='{{ http }}{{ activities.img}}'></image>
     </van-col>
     <!-- 图片部分 end -->
 
