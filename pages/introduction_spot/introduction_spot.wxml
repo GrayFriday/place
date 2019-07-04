@@ -1,29 +1,30 @@
 <!--pages/introduction_spot/introduction_spot.wxml-->
-<view>
-  <!-- 轮播图部分 start -->
-  <swiper indicator-dots="true" autoplay="true" interval="5000" indicator-active-color="red" indicator-color="#f5f5f5">
-    <swiper-item wx:for="{{bannerArray}}" wx:key="{{index}}" wx:item="{{item}}" data-itm='{{item}}' data-index='{{index}}'>
-      <image src='{{ http }}{{ item.i }}'></image>
-    </swiper-item>
-    <!-- <swiper-item>
-      <image src='../../images/pic.png'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='../../images/pic.png'></image>
-    </swiper-item> -->
-  </swiper>
-  <!-- 轮播图部分 end -->
+<swiper class="all" bindchange="change">
+  <swiper-item wx:for="{{dataArray}}" wx:key="{{key}}" wx:item="{{item}}" data-itm='{{item}}' data-index='{{index}}'>
+    <!-- 轮播图部分 start -->
+    <swiper indicator-dots="true" autoplay="true" interval="5000" indicator-active-color="red" indicator-color="#f5f5f5" class="lunbo">
+      <swiper-item class="picBox" wx:for="{{item.img_url}}" wx:key="{{index}}" wx:item="{{item}}" data-itm='{{item}}' data-index='{{index}}'>
+        <image src='{{ http }}{{item}}' class="img"></image>
+      </swiper-item>
+      <!-- <swiper-item class="picBox" >
+        <image src='../../images/pic.png' class="img"></image>
+      </swiper-item> -->
+    </swiper>
+    <!-- 轮播图部分 end -->
 
-  <van-row>
-    <!-- 内容部分 start -->
-    <van-col span="24">
-      <van-col span="24" custom-class="title">
-        湘江战役纪念公园
+    <van-row>
+      <!-- 内容部分 start -->
+      <van-col span="24">
+        <van-col span="24" custom-class="title">
+          {{ item.title }}
+        </van-col>
+        <van-col span="24" custom-class="content">
+          {{ item.desc }}
+        </van-col>
       </van-col>
-      <van-col span="24" custom-class="content">
-        湘江战役是中央红军突围以来最壮烈、最关键的一仗，我军与优势之敌苦战，终于撕开了敌重兵设防的封锁线，粉碎了蒋介石围歼红军于湘江以东的企图。 红军虽然突破了第四道封锁线，但付出了巨大的代价。5军团和在长征前夕成立的少共国际师损失过半，8军团损失更为惨重，34师被敌人重重包围，全体指战员浴血奋战，直到弹尽粮绝，绝大部分同志壮烈牺牲。渡过湘江后，中央红军和军委两纵队，已由出发时的8.6万人锐减到3万人。引起了广大干部和战士对王明军事路线的怀疑和不满到达了极点，纷纷要求改换领导。
-      </van-col>
-    </van-col>
-    <!-- 内容部分 end -->
-  </van-row>
-</view>
+      <!-- 内容部分 end -->
+    </van-row>
+  </swiper-item>
+</swiper>
+
+<!-- indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" -->

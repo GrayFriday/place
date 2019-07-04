@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/set_up/set_up",
     "pages/preview/preview",
+    "pages/introduction_spot/introduction_spot",
+    "pages/set_up/set_up",
+    
     "pages/route_detail/route_detail",
     "pages/discovery_spots_detail/discovery_spots_detail",
     "pages/answer_place/answer_place",
     "pages/route/route",
-    "pages/introduction_spot/introduction_spot",
     "pages/discovery_activities/discovery_activities",
     "pages/answer_activity/answer_activity",
     "pages/discovery_spots/discovery_spots",

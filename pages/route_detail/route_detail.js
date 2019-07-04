@@ -8,20 +8,20 @@ Page({
    */
   data: {
     datas:[],
-    http:app.globalData.http
+    http:app.globalData.http,
+    id:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    let id = parseInt(options.id);
+    this.data.id = options.id
     wx.showLoading({
       title: '加载中',
     })
     const data = {
-      id: id
+      id: options.id
     }
     const url = '/api/v1/user/getActivity'
     http(url, data, "POST").then(res => {
@@ -29,7 +29,8 @@ Page({
       let that = this;
       if (res.statusCode === 200) {
         that.setData({
-          datas: res.data.Data
+          datas: res.data.Data,
+          id:options.id
         })
         wx.hideLoading()
       }
@@ -58,9 +59,10 @@ Page({
   },
 
   // 跳转景点介绍
-  toPlaceInfor:function(){
+  toPlaceInfor:function(e){
+    let id = this.data.id
     wx.navigateTo({
-      url: '/pages/introduction_spot/introduction_spot',
+      url: '/pages/introduction_spot/introduction_spot?activity_id=' + id,
     })
   },
 

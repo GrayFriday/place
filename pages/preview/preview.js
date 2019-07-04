@@ -14,38 +14,39 @@ Page({
     inputFocus: false, // input 框的focus状态
     inputModel: '', // input 框的输入内容
     inputInfo: '请输入信息', // cover-view 显示的 input 的输入内容,初始值充当placeholder作用
-    scale: 16,
+    scale: 14,
     markers1: [],
     latitude: '',
     longitude: '',
     textData: {},
     polyline: [{
-      points: [{
-        longitude: 103.8976640,
-        latitude: 30.8225840
-      },
-      {
-        longitude: 104.0974110,
-        latitude: 30.8159170
-      },
+      // points: [
+      //   {
+      //   longitude: 103.8976640,
+      //   latitude: 30.8225840
+      // },
+      // {
+      //   longitude: 104.0974110,
+      //   latitude: 30.8159170
+      // },
 
-      {
-        longitude: 104.1063100,
-        latitude: 30.6878400
-      },
-      {
-        longitude: 104.0790000,
-        latitude: 30.2790000
-      },
-      {
-        longitude: 103.9350000,
-        latitude: 30.6050000
-      },
-      {
-        longitude: 103.8918050,
-        latitude: 30.8189570
-      }
-      ],
+      // {
+      //   longitude: 104.1063100,
+      //   latitude: 30.6878400
+      // },
+      // {
+      //   longitude: 104.0790000,
+      //   latitude: 30.2790000
+      // },
+      // {
+      //   longitude: 103.9350000,
+      //   latitude: 30.6050000
+      // },
+      // {
+      //   longitude: 103.8918050,
+      //   latitude: 30.8189570
+      // }
+      // ],
       color: "red",
       width: 3,
       dottedLine: false
@@ -130,8 +131,6 @@ Page({
       let that = this;
       if (res.statusCode === 200) {
         console.log('success')
-        console.log(res)
-
         var dataPlace = res.data.Data
         console.log(dataPlace)
         const markers = []
