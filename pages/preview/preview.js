@@ -20,33 +20,32 @@ Page({
     longitude: '',
     textData: {},
     polyline: [{
-      // points: [
-      //   {
-      //   longitude: 103.8976640,
-      //   latitude: 30.8225840
-      // },
-      // {
-      //   longitude: 104.0974110,
-      //   latitude: 30.8159170
-      // },
+      points: [{
+        longitude: 104.085256,
+        latitude: 30.672277
+      },
+      {
+        longitude: 104.086335,
+        latitude: 30.672226
+      },
 
-      // {
-      //   longitude: 104.1063100,
-      //   latitude: 30.6878400
-      // },
-      // {
-      //   longitude: 104.0790000,
-      //   latitude: 30.2790000
-      // },
-      // {
-      //   longitude: 103.9350000,
-      //   latitude: 30.6050000
-      // },
-      // {
-      //   longitude: 103.8918050,
-      //   latitude: 30.8189570
-      // }
-      // ],
+      {
+        longitude: 104.087708,
+        latitude: 30.670193
+      },
+      {
+        longitude: 104.089795,
+        latitude: 30.670193
+      },
+      {
+        longitude: 104.051718,
+        latitude: 30.699828
+      },
+      {
+        longitude: 104.029186,
+        latitude: 30.657435
+      }
+      ],
       color: "red",
       width: 3,
       dottedLine: false
@@ -147,7 +146,7 @@ Page({
             latitude,
             iconPath: "../../images/danghui.png",
             id,
-            width: 25,
+            width: 30,
             height: 30,
             title
           }
@@ -169,7 +168,7 @@ Page({
   getLocation: () => {
     return new Promise((resolve, reject) => {
       return wx.getLocation({
-        type: 'wgs84',
+        type: 'gcj02',
         success: (res) => {
           resolve(res)
         },
