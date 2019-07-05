@@ -18,37 +18,6 @@ Page({
     latitude: '',
     longitude: '',
     textData: {},
-    polyline: [{
-      points: [{
-        longitude: 104.085256,
-        latitude: 30.672277
-        },
-        {
-          longitude: 104.086335,
-          latitude: 30.672226
-        },
-
-        {
-          longitude: 104.087708,
-          latitude: 30.670193
-        },
-        {
-          longitude: 104.089795,
-          latitude: 30.670193
-        },
-        {
-          longitude: 104.051718,
-          latitude: 30.699828
-        },
-        {
-          longitude: 104.029186,
-          latitude: 30.657435
-        }
-      ],
-      color: "red",
-      width: 3,
-      dottedLine: false
-    }],
   },
 
   toShowModal: function(e) {

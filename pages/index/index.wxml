@@ -1,7 +1,6 @@
 <!--index.wxml-->
 <view>
-<!-- polyline="{{polyline}}" -->
-  <map id="map" longitude="{{longitude1}}" latitude="{{latitude1}}" scale="14" show-location="true" markers="{{markers1}}" class='all' >
+  <map id="map" longitude="{{longitude1}}" latitude="{{latitude1}}" scale="14" show-location="true" markers="{{markers1}}" class='all'>
     <cover-view class='searchBox'>
       <cover-image src='../../images/contact_us.png' class='img' bindtap='toMy'>
       </cover-image>
@@ -9,14 +8,6 @@
         请输入信息
       </cover-view>
     </cover-view>
-
-    <!-- <cover-view class='searchBox' bindtap='tapInput'>
-      <cover-image src='../../images/contact_us.png' class='img' bindtap='toMy'>
-      </cover-image>
-      <cover-view class='text'>{{inputInfo}}</cover-view>
-      <input class='input' value='{{inputModel}}' focus='{{inputFocus}}' bindblur='blurInput'></input>
-    </cover-view> -->
-
     <cover-view class='size_large' bindtap='lanya'>
       <cover-image src='../../images/lanya.png' class='lanya_pic'>
       </cover-image>
@@ -25,12 +16,6 @@
     <cover-view class='size_small' bindtap='moveToLocation'>
       <cover-image src='../../images/dingwei.png' class='dingwei'></cover-image>
     </cover-view>
-    <!-- <cover-view class='luKuang'>
-      <cover-image src='../../images/index/yingjitingche/lukuang.png' class='img_lukuang'></cover-image>
-    </cover-view>
-    <cover-view class='shiKuang'>
-      <cover-image src='../../images/index/yingjitingche/shikuang.png' class='img_shikuang'></cover-image>
-    </cover-view> -->
     <cover-view class='way'>
       <cover-view class='left' bindtap='toActivity'>
         <cover-image src='../../images/about_us.png' class='left_pic'>
@@ -52,6 +37,7 @@
       </cover-view>
     </cover-view>
 
+    <!-- 授权手机号 -->
     <cover-view class="modal-mask" wx:if="{{showModal}}" bindtap="hide"> </cover-view>
     <cover-view class="modal-mask" wx:if="{{showModal_0}}" bindtap='toIndex'> </cover-view>
     <!-- </navigator> -->

@@ -19,7 +19,7 @@ Page({
     polyline: [{
       points: [
       ],
-      color: "red",
+      color: "#FF0000",
       width: 3,
       dottedLine: false
     }],
@@ -29,6 +29,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function ( options ) {
+    wx.showLoading({
+      title: '加载中',
+    })
     console.log( options )
     this.data.id = options.id;
     var that = this;
@@ -82,10 +85,9 @@ Page({
       console.log(res)
       let that = this;
       if (res.statusCode === 200) {
-        console.log('success')
         var dataPlace = res.data.Data
-        console.log(dataPlace)
         const markers = []
+        const points = []
         for (let index in dataPlace) {
           if (!markers[index]) {
             markers[index] = []
@@ -94,6 +96,10 @@ Page({
           let latitude = dataPlace[index].latitude
           let title = dataPlace[index].title
           let id = dataPlace[index].id
+          var pointsData = {
+            longitude,
+            latitude
+          }
           var datas = {
             longitude,
             latitude,
@@ -104,13 +110,14 @@ Page({
             title
           }
           markers.push(datas)
+          points.push(pointsData)
         }
-
+        this.data.polyline[0].points = points
         that.setData({
-          markers1: markers
+          markers1: markers,
+          polyline: this.data.polyline
         })
-
-        let points = res.data.Data
+        wx.hideLoading()
       }
     })
   },
