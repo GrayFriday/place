@@ -18,7 +18,7 @@
     </cover-view>
     <cover-view class='way'>
       <cover-view class='left' bindtap='toActivity'>
-        <cover-image src='../../images/about_us.png' class='left_pic'>
+        <cover-image src='../../images/huodong_icon.png' class='left_pic'>
         </cover-image>
         <cover-view src='../../images/about_us.png' class='left_text'>
           发现活动
@@ -29,7 +29,7 @@
       </cover-image>
 
       <cover-view class='left' bindtap='toArea'>
-        <cover-image src='../../images/about_us.png' class='left_pic'>
+        <cover-image src='../../images/jingqu_icon.png' class='right_pic'>
         </cover-image>
         <cover-view src='../../images/about_us.png' class='left_text'>
           发现景区

@@ -181,6 +181,13 @@ map {
   margin-top: 10rpx;
 }
 
+.right_pic{
+  width: 60rpx;
+  height: 45rpx;
+  margin-left: 39%;
+  margin-top: 10rpx;
+}
+
 .left_text{
   font-size: 12px;
   text-align: center;

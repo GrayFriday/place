@@ -261,7 +261,7 @@ Page({
         setTimeout(function () {
           wx.hideToast()
         }, 3000)
-        that.getBluetoothAdapterState();
+        // that.getBluetoothAdapterState();
       },
 
       fail: function(err) {
@@ -277,14 +277,14 @@ Page({
       }
     });
 
-    wx.onBluetoothAdapterStateChange(function(res) {
-      var that = this;
-      console.log(res)
-      var available = res.available;
-      if (available) {
-        that.getBluetoothAdapterState();
-      }
-    })
+    // wx.onBluetoothAdapterStateChange(function(res) {
+    //   var that = this;
+    //   console.log(res)
+    //   var available = res.available;
+    //   if (available) {
+    //     that.getBluetoothAdapterState();
+    //   }
+    // })
 
   },
 

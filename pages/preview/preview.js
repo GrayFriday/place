@@ -45,7 +45,7 @@ Page({
 
       },
       fail: function(info) {
-        //失败回调
+       
       }
     })
 

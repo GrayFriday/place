@@ -15,9 +15,7 @@
     "pages/register/register",
     "pages/search/search",
     "pages/certificate/certificate",
-    
     "pages/personal_home_page/personal_home_page",
-    
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs"
