@@ -17,7 +17,7 @@ App({
         }
         const url = '/api/v1/Wx/getUserKey'
         http(url, data, "POST").then(res => {
-          console.log(res)
+          // console.log(res)
         
         })
 

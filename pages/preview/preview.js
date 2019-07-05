@@ -10,41 +10,14 @@ Page({
    */
 
   data: {
-    showModal_0: false,
-    inputFocus: false, // input 框的focus状态
-    inputModel: '', // input 框的输入内容
-    inputInfo: '请输入信息', // cover-view 显示的 input 的输入内容,初始值充当placeholder作用
+    id:'',
     scale: 14,
     markers1: [],
     latitude: '',
     longitude: '',
     textData: {},
     polyline: [{
-      points: [{
-        longitude: 104.085256,
-        latitude: 30.672277
-      },
-      {
-        longitude: 104.086335,
-        latitude: 30.672226
-      },
-
-      {
-        longitude: 104.087708,
-        latitude: 30.670193
-      },
-      {
-        longitude: 104.089795,
-        latitude: 30.670193
-      },
-      {
-        longitude: 104.051718,
-        latitude: 30.699828
-      },
-      {
-        longitude: 104.029186,
-        latitude: 30.657435
-      }
+      points: [
       ],
       color: "red",
       width: 3,
@@ -52,29 +25,12 @@ Page({
     }],
   },
 
-  toShowModal: function (e) {
-    this.setData({
-      showModal: true
-    })
-  },
-
-  hide: function (e) {
-    this.setData({
-      showModal: false
-    });
-  },
-
-  // 去搜索
-  toSearch: function () {
-    wx.navigateTo({
-      url: '/pages/search/search',
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
+  onLoad: function ( options ) {
+    console.log( options )
+    this.data.id = options.id;
     var that = this;
     var myAmapFun = new amapFile.AMapWX({
       key: '06127e36a780db3eb68addd63fa1be36'
@@ -96,8 +52,6 @@ Page({
         latitude1: res.latitude
       })
     })
-
-    this.rejister();
 
   },
   // 地图放大
@@ -121,11 +75,10 @@ Page({
 
   getStadium: function () {
     const data = {
-
+      id:this.data.id
     }
-    const url = '/api/v1/site/getSite'
+    const url = '/api/v1/user/livePreview'
     http(url, data, "POST").then(res => {
-      console.log(1111)
       console.log(res)
       let that = this;
       if (res.statusCode === 200) {
@@ -159,7 +112,6 @@ Page({
 
         let points = res.data.Data
       }
-
     })
   },
 
@@ -198,106 +150,6 @@ Page({
     this.setData({
       inputInfo: e.detail.value || '输入'
     });
-  },
-
-  openLanya: function () {
-    wx.openBluetoothAdapter({
-      success(res) {
-        if (errCode = 0) {
-          wx.showModal({
-            title: '提示',
-            content: '蓝牙已开启',
-            icon: "none"
-          })
-        }
-        // console.log(res)
-      }
-    })
-  },
-  lanya: function () {
-    // this.openLanya()
-  },
-
-  // 跳转活动页
-  toActivity: function () {
-    wx.navigateTo({
-      url: '/pages/discovery_activities/discovery_activities',
-    })
-  },
-
-  // 跳转景区页
-  toArea: function () {
-    wx.navigateTo({
-      url: '/pages/discovery_spots/discovery_spots',
-    })
-  },
-
-  // 跳转路线页
-  toRoute: function () {
-    wx.navigateTo({
-      url: '/pages/route/route',
-    })
-  },
-
-  // 跳转个人主页
-  toMy: function () {
-
-    wx.navigateTo({
-      url: '/pages/personal_home_page/personal_home_page',
-    })
-  },
-
-  // 验证是否登录过期
-  rejister: function (e) {
-    var that = this
-    wx.checkSession({
-      success: function (res) {
-        console.log(res, '登录未过期')
-      },
-      fail: function (res) {
-        console.log(res, '登录过期了')
-        //再次调用wx.login()
-        wx.login({
-          success: function (res) {
-            console.log(res.code)
-            //发送请求
-            http({
-              s: "Wxmini.getUserKey",
-              code: res.code
-            }, "POST").then(res => {
-              console.log(res)
-              wx.setStorageSync('openid', res.data.data.userdata.openid)
-              wx.setStorageSync('userId', res.data.data.userdata.id)
-            })
-          }
-        })
-      }
-    })
-  },
-
-  // 获取手机号
-
-  getPhoneNumber: function (e) {
-    console.log(2222222)
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
-    var detail = e.detail;
-    const data = {
-      "openid": openid,
-      "encryptedData": detail.encryptedData,
-      "iv": detail.iv
-    }
-    const url = '/api/v1/user/get_activity'
-    http(url, data, "POST").then(res => {
-      console.log(res)
-      let that = this;
-      if (res.statusCode === 200) {
-        console.log(res.data.phoneNumber);
-        wx.setStorageSync("phonenumber", res.data.phoneNumber);
-      }
-
-    })
   },
 
   toIndex: function () {

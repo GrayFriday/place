@@ -112,12 +112,9 @@ Page({
     }
     const url = '/api/v1/site/getSite'
     http(url, data, "POST").then(res => {
-      console.log(1111)
-      console.log(res)
       let that = this;
       if (res.statusCode === 200) {
         var dataPlace = res.data.Data
-        console.log(dataPlace)
         const markers = []
         for (let index in dataPlace) {
           if (!markers[index]) {

@@ -53,8 +53,9 @@ Page({
 
   // 跳转线路预览
   toRoutePreview:function(){
+    let id = this.data.id
     wx.navigateTo({
-      url: '/pages/preview/preview',
+      url: '/pages/preview/preview?id=' + id,
     })
   },
 

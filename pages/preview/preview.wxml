@@ -1,7 +1,7 @@
 <!--pages/preview/preview.wxml-->
 <view>
 <!-- polyline="{{polyline}}" -->
-  <map longitude="{{longitude1}}" latitude="{{latitude1}}" scale="{{ scale }}" show-location="true" markers="{{markers1}}" class='all'  polyline="{{polyline}}" >
+  <map longitude="{{longitude1}}" latitude="{{latitude1}}" scale="{{ scale }}" show-location="true" markers="{{markers1}}" class='all' >
 
     <cover-view class='size_large' bindtap='fangDaTap'>
       +
